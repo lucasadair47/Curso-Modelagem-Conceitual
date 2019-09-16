@@ -14,8 +14,16 @@ import com.nelioalves.cursomc.domain.Categoria;
 public class CategoriaResource {
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String listar() {
-		return "Rest está funcionando";
+	public List<Categoria> listar() {
+		
+		Categoria cat1 = new Categoria(1, "informatica");
+		Categoria cat2 = new Categoria(2, "escritorio");	
+		
+		List<Categoria> lista = new ArrayList<>();
+		lista.add(cat1);
+		lista.add(cat2);
+		
+		return lista;
 		
 	}
 
